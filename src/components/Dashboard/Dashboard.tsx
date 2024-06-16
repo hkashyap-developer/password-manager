@@ -18,6 +18,7 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Pagination, PaginationContent, PaginationItem } from "@/components/ui/pagination"
 
+
 import NewLogin from '@/components/NewLogin/NewLogin';
 
 export default function Component() {
@@ -26,15 +27,15 @@ export default function Component() {
 
 
 
-      <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
+      <aside className="fixed z-30 inset-y-0 left-0 hidden w-14 flex-col border-r bg-background sm:flex">
         <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
           <TooltipProvider>
             <Link
               href="#"
-              className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
+              className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-sm bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
               prefetch={false}
             >
-              <Package2Icon className="h-4 w-4 transition-all group-hover:scale-110" />
+                  <HomeIcon className="h-5 w-5" />
               <span className="sr-only">Acme Inc</span>
             </Link>
             <Tooltip>
@@ -44,7 +45,7 @@ export default function Component() {
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                   prefetch={false}
                 >
-                  <HomeIcon className="h-5 w-5" />
+                  <Package2Icon className="h-4 w-4 transition-all group-hover:scale-110" />
                   <span className="sr-only">Home</span>
                 </Link>
               </TooltipTrigger>
@@ -122,8 +123,8 @@ export default function Component() {
           </TooltipProvider>
         </nav>
       </aside>
-      <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
-        <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+      <div className="flex-col sm:gap-4 sm:py-4 sm:pl-14">
+        <header className="flex justify-between pb-4 sticky top-0 z-10 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
           <Sheet>
             <SheetTrigger asChild>
               <Button size="icon" variant="outline" className="sm:hidden">
@@ -199,19 +200,12 @@ export default function Component() {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <div className="relative ml-auto flex-1 md:grow-0">
-            <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input
-              type="search"
-              placeholder="Search..."
-              className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
-            />
-          </div>
+
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="icon" className="overflow-hidden rounded-full">
                 <img
-                  src="/placeholder.svg"
+                  src="/himanshu.png"
                   width={36}
                   height={36}
                   alt="Avatar"
@@ -234,7 +228,7 @@ export default function Component() {
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
               <Card className="sm:col-span-2" x-chunk="dashboard-05-chunk-0">
                 <CardHeader className="pb-3">
-                  <CardTitle>Add A New Credential</CardTitle>
+                  <CardTitle>Add Credential</CardTitle>
                   <CardDescription className="max-w-lg text-balance leading-relaxed">
                     Introducing Our Dynamic Orders Dashboard for Seamless Management and Insightful Analysis.
                   </CardDescription>
@@ -243,30 +237,28 @@ export default function Component() {
                     <NewLogin/>
                 </CardFooter>
               </Card>
-              <Card x-chunk="dashboard-05-chunk-1">
-                <CardHeader className="pb-2">
-                  <CardDescription>This Week</CardDescription>
-                  <CardTitle className="text-4xl">$1,329</CardTitle>
+
+
+
+
+
+              <Card className="sm:col-span-2" x-chunk="dashboard-05-chunk-0">
+                <CardHeader className="pb-3">
+                  <CardTitle>Add New Task</CardTitle>
+                  <CardDescription className="max-w-lg text-balance leading-relaxed">
+                    Introducing Our Dynamic Orders Dashboard for Seamless Management and Insightful Analysis.
+                  </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="text-xs text-muted-foreground">+25% from last week</div>
-                </CardContent>
                 <CardFooter>
-                  <Progress value={25} aria-label="25% increase" />
+                    <NewLogin/>
                 </CardFooter>
               </Card>
-              <Card x-chunk="dashboard-05-chunk-2">
-                <CardHeader className="pb-2">
-                  <CardDescription>This Month</CardDescription>
-                  <CardTitle className="text-4xl">$5,329</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-xs text-muted-foreground">+10% from last month</div>
-                </CardContent>
-                <CardFooter>
-                  <Progress value={12} aria-label="12% increase" />
-                </CardFooter>
-              </Card>
+
+
+
+
+
+
             </div>
             <Tabs defaultValue="week">
               <div className="flex items-center">
@@ -307,11 +299,11 @@ export default function Component() {
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>Customer</TableHead>
-                          <TableHead className="hidden sm:table-cell">Type</TableHead>
-                          <TableHead className="hidden sm:table-cell">Status</TableHead>
-                          <TableHead className="hidden md:table-cell">Date</TableHead>
-                          <TableHead className="text-right">Amount</TableHead>
+                          <TableHead>Login URL</TableHead>
+                          <TableHead className="hidden sm:table-cell">Username</TableHead>
+                          <TableHead className="hidden sm:table-cell">Password</TableHead>
+                          <TableHead className="hidden md:table-cell">Last Used</TableHead>
+                          <TableHead className="text-right">More</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -435,27 +427,28 @@ export default function Component() {
             </Tabs>
           </div>
           <div>
+
+
+
+
+
             <Card className="overflow-hidden" x-chunk="dashboard-05-chunk-4">
+
+
+
+
+
+
+
               <CardHeader className="flex flex-row items-start bg-muted/50">
                 <div className="grid gap-0.5">
                   <CardTitle className="group flex items-center gap-2 text-lg">
                     Task List
-                    <Button
-                      size="icon"
-                      variant="outline"
-                      className="h-6 w-6 opacity-0 transition-opacity group-hover:opacity-100"
-                    >
-                      <CopyIcon className="h-3 w-3" />
-                      <span className="sr-only">Copy Order ID</span>
-                    </Button>
                   </CardTitle>
-                  <CardDescription>Date: November 23, 2023</CardDescription>
+                  <CardDescription>Last Active: November 23, 2023</CardDescription>
                 </div>
                 <div className="ml-auto flex items-center gap-1">
-                  <Button size="sm" variant="outline" className="h-8 gap-1">
-                    <TruckIcon className="h-3.5 w-3.5" />
-                    <span className="lg:sr-only xl:not-sr-only xl:whitespace-nowrap">Track Task</span>
-                  </Button>
+
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button size="icon" variant="outline" className="h-8 w-8">
@@ -473,43 +466,174 @@ export default function Component() {
                 </div>
               </CardHeader>
               <CardContent className="p-6 text-sm">
+
+
+
+
+              <div className="width-full mb-4">
+            <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+            <Input
+              type="search"
+              placeholder="Search..."
+              className="w-full rounded-lg bg-background pl-8 "
+            />
+          </div>
+
+
+
+
                 <div className="grid gap-3">
-                  <div className="font-semibold">Order Details</div>
+                  <div className="">Task Details</div>
+                  <Separator className="my-2" /> 
+
+
+
+
+
+
+
+
+
+
+                  <div className="">
                   <ul className="grid gap-3">
                     <li className="flex items-center justify-between">
-                      <span className="text-muted-foreground">
-                        Glimmer Lamps x <span>2</span>
+                      <span className="font-semibold">
+                        Research About Next.js
                       </span>
-                      <span>$250.00</span>
+                      <div className="flex gap-2">
+                        <CopyIcon className="h-3 w-3" />
+                        <DeleteIcon className="h-3 w-3" />
+                      </div>
                     </li>
                     <li className="flex items-center justify-between">
                       <span className="text-muted-foreground">
-                        Aqua Filters x <span>1</span>
+                        Figure out how to use routing in next.js and create a system design. Figure out how to use routing in next.js and create a system design. 
                       </span>
-                      <span>$49.00</span>
                     </li>
                   </ul>
                   <Separator className="my-2" />
+                  </div>
+
+
+
+
+
+
+
+
+
+
+                  <div className="">
                   <ul className="grid gap-3">
                     <li className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Subtotal</span>
-                      <span>$299.00</span>
+                      <span className="font-semibold">
+                        Research About Next.js
+                      </span>
+                      <div className="flex gap-2">
+                        <CopyIcon className="h-3 w-3" />
+                        <CopyIcon className="h-3 w-3" />
+                      </div>
                     </li>
                     <li className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Shipping</span>
-                      <span>$5.00</span>
-                    </li>
-                    <li className="flex items-center justify-between">
-                      <span className="text-muted-foreground">Tax</span>
-                      <span>$25.00</span>
-                    </li>
-                    <li className="flex items-center justify-between font-semibold">
-                      <span className="text-muted-foreground">Total</span>
-                      <span>$329.00</span>
+                      <span className="text-muted-foreground">
+                        Figure out how to use routing in next.js and create a system design. 
+                      </span>
                     </li>
                   </ul>
+                  <Separator className="my-2" />
+                  </div>
+
+
+
+
+
+
+
+
+                  <div className="">
+                  <ul className="grid gap-3">
+                    <li className="flex items-center justify-between">
+                      <span className="font-semibold">
+                        Research About Next.js
+                      </span>
+                      <div className="flex gap-2">
+                        <CopyIcon className="h-3 w-3" />
+                        <CopyIcon className="h-3 w-3" />
+                      </div>
+                    </li>
+                    <li className="flex items-center justify-between">
+                      <span className="text-muted-foreground">
+                        Figure out how to use routing in next.js and create a system design. Figure out how to use routing in next.js and create a system design. 
+                      </span>
+                    </li>
+                  </ul>
+                  <Separator className="my-2" />
+                  </div>
+
+
+
+
+
+
+
+
+
+
+                  <div className="">
+                  <ul className="grid gap-3">
+                    <li className="flex items-center justify-between">
+                      <span className="font-semibold">
+                        Research About Next.js
+                      </span>
+                      <div className="flex gap-2">
+                        <CopyIcon className="h-3 w-3" />
+                        <CopyIcon className="h-3 w-3" />
+                      </div>
+                    </li>
+                    <li className="flex items-center justify-between">
+                      <span className="text-muted-foreground">
+                        Figure out how to use routing in next.js and create a system design. Figure out how to use routing in next.js and create a system design. 
+                      </span>
+                    </li>
+                  </ul>
+                  <Separator className="my-2" />
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+                  <div className="">
+                  <ul className="grid gap-3">
+                    <li className="flex items-center justify-between">
+                      <span className="font-semibold">
+                        Research About Next.js
+                      </span>
+                      <div className="flex gap-2">
+                        <CopyIcon className="h-3 w-3" />
+                        <CopyIcon className="h-3 w-3" />
+                      </div>
+                    </li>
+                    <li className="flex items-center justify-between">
+                      <span className="text-muted-foreground">
+                        Figure out how to use routing in next.js and create a system design. 
+                      </span>
+                    </li>
+                  </ul>
+                  <Separator className="my-2" />
+                  </div>
+
+
+
                 </div>
-                <Separator className="my-4" />
+
 
               </CardContent>
               <CardFooter className="flex flex-row items-center border-t bg-muted/50 px-6 py-3">
@@ -600,6 +724,32 @@ function CopyIcon(props) {
     </svg>
   )
 }
+
+
+
+function DeleteIcon(props) {
+    return (
+      <svg
+        {...props}
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+        <path xmlns="http://www.w3.org/2000/svg" d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
+      </svg>
+    )
+  }
+  
+
+
+
 
 
 function CreditCardIcon(props) {
@@ -710,22 +860,7 @@ function ListFilterIcon(props) {
 
 function MoveVerticalIcon(props) {
   return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="8 18 12 22 16 18" />
-      <polyline points="8 6 12 2 16 6" />
-      <line x1="12" x2="12" y1="2" y2="22" />
-    </svg>
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
   )
 }
 
