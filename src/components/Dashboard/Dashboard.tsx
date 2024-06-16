@@ -18,9 +18,14 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Pagination, PaginationContent, PaginationItem } from "@/components/ui/pagination"
 
+import NewLogin from '@/components/NewLogin/NewLogin';
+
 export default function Component() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
+
+
+
       <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
         <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
           <TooltipProvider>
@@ -40,10 +45,10 @@ export default function Component() {
                   prefetch={false}
                 >
                   <HomeIcon className="h-5 w-5" />
-                  <span className="sr-only">Dashboard</span>
+                  <span className="sr-only">Home</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Dashboard</TooltipContent>
+              <TooltipContent side="right">Home</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -179,22 +184,18 @@ export default function Component() {
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="#" prefetch={false}>
-                    Dashboard
+                  <Link href="/" prefetch={false}>
+                    Home
                   </Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="#" prefetch={false}>
-                    Orders
+                  <Link href="/dashbaord" prefetch={false}>
+                    Dashboard
                   </Link>
                 </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Recent Orders</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
@@ -233,13 +234,13 @@ export default function Component() {
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
               <Card className="sm:col-span-2" x-chunk="dashboard-05-chunk-0">
                 <CardHeader className="pb-3">
-                  <CardTitle>Your Orders</CardTitle>
+                  <CardTitle>Add A New Credential</CardTitle>
                   <CardDescription className="max-w-lg text-balance leading-relaxed">
                     Introducing Our Dynamic Orders Dashboard for Seamless Management and Insightful Analysis.
                   </CardDescription>
                 </CardHeader>
                 <CardFooter>
-                  <Button>Create New Order</Button>
+                    <NewLogin/>
                 </CardFooter>
               </Card>
               <Card x-chunk="dashboard-05-chunk-1">
@@ -438,7 +439,7 @@ export default function Component() {
               <CardHeader className="flex flex-row items-start bg-muted/50">
                 <div className="grid gap-0.5">
                   <CardTitle className="group flex items-center gap-2 text-lg">
-                    Order Oe31b70H
+                    Task List
                     <Button
                       size="icon"
                       variant="outline"
@@ -453,7 +454,7 @@ export default function Component() {
                 <div className="ml-auto flex items-center gap-1">
                   <Button size="sm" variant="outline" className="h-8 gap-1">
                     <TruckIcon className="h-3.5 w-3.5" />
-                    <span className="lg:sr-only xl:not-sr-only xl:whitespace-nowrap">Track Order</span>
+                    <span className="lg:sr-only xl:not-sr-only xl:whitespace-nowrap">Track Task</span>
                   </Button>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
@@ -509,55 +510,7 @@ export default function Component() {
                   </ul>
                 </div>
                 <Separator className="my-4" />
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="grid gap-3">
-                    <div className="font-semibold">Shipping Information</div>
-                    <address className="grid gap-0.5 not-italic text-muted-foreground">
-                      <span>Liam Johnson</span>
-                      <span>1234 Main St.</span>
-                      <span>Anytown, CA 12345</span>
-                    </address>
-                  </div>
-                  <div className="grid auto-rows-max gap-3">
-                    <div className="font-semibold">Billing Information</div>
-                    <div className="text-muted-foreground">Same as shipping address</div>
-                  </div>
-                </div>
-                <Separator className="my-4" />
-                <div className="grid gap-3">
-                  <div className="font-semibold">Customer Information</div>
-                  <dl className="grid gap-3">
-                    <div className="flex items-center justify-between">
-                      <dt className="text-muted-foreground">Customer</dt>
-                      <dd>Liam Johnson</dd>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <dt className="text-muted-foreground">Email</dt>
-                      <dd>
-                        <a href="#">liam@acme.com</a>
-                      </dd>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <dt className="text-muted-foreground">Phone</dt>
-                      <dd>
-                        <a href="#">+1 234 567 890</a>
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-                <Separator className="my-4" />
-                <div className="grid gap-3">
-                  <div className="font-semibold">Payment Information</div>
-                  <dl className="grid gap-3">
-                    <div className="flex items-center justify-between">
-                      <dt className="flex items-center gap-1 text-muted-foreground">
-                        <CreditCardIcon className="h-4 w-4" />
-                        Visa
-                      </dt>
-                      <dd>**** **** **** 4532</dd>
-                    </div>
-                  </dl>
-                </div>
+
               </CardContent>
               <CardFooter className="flex flex-row items-center border-t bg-muted/50 px-6 py-3">
                 <div className="text-xs text-muted-foreground">
