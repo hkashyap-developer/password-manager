@@ -502,8 +502,8 @@ export default function Component() {
                         Research About Next.js
                       </span>
                       <div className="flex gap-2">
-                        <CopyIcon className="h-3 w-3" />
-                        <DeleteIcon className="h-3 w-3" />
+                        <CopyIcon className="h-4 w-4" />
+                        <ShoppingCartIcon className="h-4 w-4" />
                       </div>
                     </li>
                     <li className="flex items-center justify-between">
@@ -531,8 +531,8 @@ export default function Component() {
                         Research About Next.js
                       </span>
                       <div className="flex gap-2">
-                        <CopyIcon className="h-3 w-3" />
-                        <CopyIcon className="h-3 w-3" />
+                        <CopyIcon className="h-4 w-4" />
+                        <CopyIcon className="h-4 w-4" />
                       </div>
                     </li>
                     <li className="flex items-center justify-between">
@@ -558,8 +558,8 @@ export default function Component() {
                         Research About Next.js
                       </span>
                       <div className="flex gap-2">
-                        <CopyIcon className="h-3 w-3" />
-                        <CopyIcon className="h-3 w-3" />
+                        <CopyIcon className="h-4 w-4" />
+                        <CopyIcon className="h-4 w-4" />
                       </div>
                     </li>
                     <li className="flex items-center justify-between">
@@ -587,18 +587,25 @@ export default function Component() {
                         Research About Next.js
                       </span>
                       <div className="flex gap-2">
-                        <CopyIcon className="h-3 w-3" />
-                        <CopyIcon className="h-3 w-3" />
+                        <CopyIcon className="h-4 w-4" />
+                        <CopyIcon className="h-4 w-4" />
                       </div>
                     </li>
                     <li className="flex items-center justify-between">
                       <span className="text-muted-foreground">
-                        Figure out how to use routing in next.js and create a system design. Figure out how to use routing in next.js and create a system design. 
+                        Create a fresh Next.js app. 
                       </span>
                     </li>
                   </ul>
                   <Separator className="my-2" />
                   </div>
+
+
+
+
+
+
+
 
 
 
@@ -617,18 +624,29 @@ export default function Component() {
                         Research About Next.js
                       </span>
                       <div className="flex gap-2">
-                        <CopyIcon className="h-3 w-3" />
-                        <CopyIcon className="h-3 w-3" />
+                        <CopyIcon className="h-4 w-4" />
+                        <CopyIcon className="h-4 w-4" />
                       </div>
                     </li>
                     <li className="flex items-center justify-between">
                       <span className="text-muted-foreground">
-                        Figure out how to use routing in next.js and create a system design. 
+                        Create a system design. Figure out how to use routing in next.js and create a system design. 
                       </span>
                     </li>
                   </ul>
                   <Separator className="my-2" />
                   </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -794,6 +812,8 @@ function FileIcon(props) {
 }
 
 
+
+
 function HomeIcon(props) {
   return (
     <svg
@@ -860,8 +880,7 @@ function ListFilterIcon(props) {
 
 function MoveVerticalIcon(props) {
   return (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
-  )
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>  )
 }
 
 
